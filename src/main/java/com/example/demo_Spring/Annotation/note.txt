@@ -1,0 +1,16 @@
+@Retention: Dùng để chú thích mức độ tồn tại của một annotation nào đó. Cụ thể có 3 mức nhận thức tồn tại của vật được chú thích:
+
+RetentionPolicy.SOURCE: Tồn tại trên code nguồn, và không được bộ dịch (compiler) nhận ra.
+RetentionPolicy.CLASS: Mức tồn tại được bộ dịch nhận ra, nhưng không được nhận biết bởi máy ảo tại thời điểm chạy (Runtime).
+RetentionPolicy.RUNTIME: Mức tồn tại lớn nhất, được bộ dịch (compiler) nhận biết, và máy ảo (jvm) cũng nhận ra khi chạy chương trình.
+@Target: Dùng để chú thích phạm vi sử dụng của một Annotation
+
+ElementType.TYPE - Cho phép chú thích trên Class, interface, enum, annotation.
+ElementType.FIELD - Cho phép chú thích trường (field), bao gồm cả các hằng số enum.
+ElementType.METHOD - Cho phép chú thích trên method.
+ElementType.PARAMETER - Cho phép chú thích trên parameter
+ElementType.CONSTRUCTOR - Cho phép chú thích trên constructor
+ElementType.LOCAL_VARIABLE - Cho phép chú thích trên biến địa phương.
+ElementType.ANNOTATION_TYPE - Cho phép chú thích trên Annotation khác
+ElementType.PACKAGE - Cho phép chú thích trên package.
+

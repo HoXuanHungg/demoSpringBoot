@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <th:block th:unless="${#lists.isEmpty(listUser)}">
+        <table>
+            <tr>
+                <td>STT</td>
+                <td>id</td>
+                <td>name</td>
+            </tr>
+            <tr th:each="user,stt : ${listUser}">
+                <td th:text="${stt.count}"></td>
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.name}"></td>
+            </tr>
+        </table>
+    </th:block>
+</body>
+</html>
